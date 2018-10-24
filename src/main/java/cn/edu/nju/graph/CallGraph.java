@@ -48,9 +48,14 @@ public class CallGraph {
             if(nodes2.contains(node)) {
                 List<String> edges1 = this.getEdges(node);
                 List<String> edges2 = g.getEdges(node);
+
+                List<String> tmp = new ArrayList<>();
+                tmp.addAll(edges2);
+
                 for(String edge : edges1) {
-                    if(edges2.contains(edge)) {
+                    if(tmp.contains(edge)) {
                         sameEdgesNum++;
+                        tmp.remove(edge);
                     }
                 }
 
@@ -60,7 +65,7 @@ public class CallGraph {
 
         int diff = (this.getEdgeNum() + g.getEdgeNum()) - 2 * sameEdgesNum;
 
-        return (double)diff / (double)(this.getEdgeNum() + g.getEdgeNum());
+        return (double)diff / (double)(this.getEdgeNum() + g.getEdgeNum() - sameEdgesNum);
 
     }
 
