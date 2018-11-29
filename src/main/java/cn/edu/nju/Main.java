@@ -11,7 +11,7 @@ public class Main {
             System.out.println("E(g1) = " + g1.getEdgeNum() + " E(g2) = " + g2.getEdgeNum());
             System.out.println("Diff(g1, g2) =  " + g1.computeGraphDiff(g2) + " (by edges.)");
 
-            System.out.println("Diff(g1, g2) = " + g1.computeEditDistance(g2) + " (by nodes.)");
+           // System.out.println("Diff(g1, g2) = " + g1.computeEditDistance(g2) + " (by nodes.)");
         }
         else {
             System.out.println("Usage: java Main graphFile1 graphFile2");
