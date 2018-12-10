@@ -4,6 +4,7 @@
 ### 环境依赖
 - Java: 1.8.0_192
 - Python: 3.6.7
+- maven: 10.14.1
 
 ### 如何运行
 - (1)克隆本代码仓库[JCallGraph](https://github.com/njucjc/JCallGraph)；
